@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeSpace Studio | Танці Софіївська Борщагівка 2026</title>
+    
+    <!-- Bootstrap 5.3.3 CSS и Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* Золотая палитра и стили 2026 */
+        :root { 
+            --main-gold: #D4AF37; 
+            --soft-gold: rgba(212, 175, 55, 0.2);
+            --dark-bg: #0b0b0b;
+        }
+        
+        html { scroll-behavior: smooth; }
+        
+        body { 
+            background: linear-gradient(to bottom, #000, #1a1a1a); 
+            color: white; 
+            font-family: 'Segoe UI', Roboto, sans-serif; 
+        }
+
+        /* Главный экран */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
+            url(https://cdn.freepixel.com/thumb/free-photos-a-modern-dance-studio-with-a-sleek-and-minimalist-aesthetic-the-room-is-well-lit-with-a-row-of-mirro-th-1004268893.jpg?referrer=grok.com) center/cover no-repeat; 
+            height: 85vh; 
+        }
+
+        .gold-text { color: var(--main-gold); }
+        
+        .btn-gold { 
+            background-color: var(--main-gold); 
+            color: black; 
+            padding: 12px 35px; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-gold:hover { 
+            background-color: #f1c40f; 
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Карточки направлений */
+        .card { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid var(--soft-gold); 
+            color: white; 
+            transition: 0.4s;
+            border-radius: 15px;
+        }
+        .card:hover { 
+            transform: translateY(-10px); 
+            background: var(--soft-gold); 
+            border-color: var(--main-gold); 
+        }
+
+        /* Карта */
+        .map-container { 
+            filter: grayscale(1) invert(0.9); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            height: 350px; 
+            border: 1px solid var(--soft-gold); 
+        }
+
+        /* Соцсети */
+        .social-link { 
+            color: var(--main-gold); 
+            font-size: 1.8rem; 
+            transition: 0.3s; 
+            text-decoration: none;
+        }
+        .social-link:hover { color: white; }
+
+        .form-control, .form-select {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--soft-gold);
+            color: white;
+            padding: 12px;
+        }
+        .form-control:focus, .form-select:focus {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--main-gold);
+            color: white;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top border-bottom border-dark">
+        <div class="container">
+         <a class="navbar-brand" href="#">
+    <img src="logo.png" alt="VibeSpace Studio" height="65" class="d-inline-block align-top">
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#styles">Напрямки</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакти</a></li>
+                    <li class="nav-item mx-lg-3">
+                        <a class="social-link" href="https://www.instagram.com/vibespace_studio/" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-gold" href="#form">Записатися</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-1 fw-bold mb-3">VibeSpace <span class="gold-text">_Dance Fit Studio_</span></h1>
+            <p class="lead mb-5 fs-3 fw-light text-uppercase" style="letter-spacing: 2px;">Преміальна студія танцю та фітнесу</p>
+            <a href="#form" class="btn btn-gold btn-lg">ОТРИМАТИ ПРОБНЕ ЗАНЯТТЯ</a>
+        </div>
+    </section>
+
+    <!-- Направления -->
+    <section id="styles" class="container py-5">
+        <h2 class="text-center mb-2 fw-bold gold-text">НАШІ НАПРЯМКИ</h2>
+        <p class="text-center text-secondary mb-5">Професійне навчання для будь-якого рівня підготовки</p>
+        
+        <!-- Взрослые 25+ -->
+        <!-- Jazz-Funk -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="card h-100 p-3 text-center">
+        <img src="https://www.shutterstock.com/image-photo/energetic-group-young-women-performing-600nw-2644640923.jpg" class="img-fluid rounded mb-3" alt="Jazz-Funk в VibeSpace Studio" style="height:150px; object-fit:cover;">
+        <h5 class="fw-bold mb-2 gold-text">Jazz-Funk</h5>
+        <p class="small text-secondary">Поєднує хіп-хоп, плавність джазу та виразність вакінгу, вибухова енергія!</p>
+    </div>
+</div>
+            <!-- Choreo -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="card h-100 p-3 text-center">
+        <img src="https://www.mpdance.co.uk/wp-content/uploads/MPDA10YearAnniversaryShowcase_AdvancedLyrical_0996-scaled.jpg" class="img-fluid rounded mb-3" alt="Choreo в VibeSpace Studio" style="height:150px; object-fit:cover;">
+        <h5 class="fw-bold mb-2 gold-text">Choreo</h5>
+        <p class="small text-secondary">Поєднання різних танцювальних напрямків. Глибокі емоції та неймовірна свобода в кожному русі.</p>
+    </div>
+</div>
+<!-- Lady Dance -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="card h-100 p-3 text-center">
+        <img src="https://i.postimg.cc/0jK1jK0K/lady-dance-silhouette.jpg" class="img-fluid rounded mb-3" alt="Lady Dance в VibeSpace Studio" style="height:150px; object-fit:cover;">
+        <h5 class="fw-bold mb-2 gold-text">Lady Dance</h5>
+        <p class="small text-secondary">Танець-флірт! Розкрий свою жіночність, відчуй себе сексуальною.</p>
+    </div>
+</div>
+<!-- Body-ballet -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="card h-100 p-3 text-center">
+        <img src="https://i.postimg.cc/3xVJ0k5K/body-ballet-group.jpg" class="img-fluid rounded mb-3" alt="Body-ballet в VibeSpace Studio" style="height:150px; object-fit:cover;">
+        <h5 class="fw-bold mb-2 gold-text">Body-ballet</h5>
+        <p class="small text-secondary">Витончений силует, елегантність рухів та граціозність. Балетна краса без пуантів.</p>
+    </div>
+</div>
+<!-- Stretching -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="card h-100 p-3 text-center">
+        <img src="https://i.postimg.cc/9f5k5k5K/stretching-flexibility.jpg" class="img-fluid rounded mb-3" alt="Stretching в VibeSpace Studio" style="height:150px; object-fit:cover;">
+        <h5 class="fw-bold mb-2 gold-text">Stretching</h5>
+        <p class="small text-secondary">Глибокий релакс та неймовірна гнучкість. Зніми напругу, відчуй легкість і свободу в кожній клітинці тіла.</p>
+    </div>
+</div>
+<!-- Pilates -->
+<div class="col-6 col-md-4 col-lg-3">
+    <div class="card h-100 p-3 text-center">
+        <img src="https://i.postimg.cc/3w1kL5pK/pilates-group-class.jpg" class="img-fluid rounded mb-3" alt="Pilates в VibeSpace Studio" style="height:150px; object-fit:cover;">
+        <h5 class="fw-bold mb-2 gold-text">Pilates</h5>
+        <p class="small text-secondary">Сильний кор, ідеальні лінії та контроль над тілом. Тренування, що скульптурує твою мрію.</p>
+    </div>
+</div>
+
+        <!-- Дитячі групи -->
+<h3 class="mb-4 border-bottom border-warning pb-2 mx-auto" style="width: fit-content;">Дитячі групи</h3>
+<div class="row g-4 justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card h-100 p-4 text-center">
+            <img src="https://i.postimg.cc/3wG0kL5p/kids-ballet-class.jpg" class="img-fluid rounded mb-3" alt="Дитяча хореографія в VibeSpace Studio" style="height:200px; object-fit:cover;">
+            <h4 class="fw-bold mb-2 gold-text">Хореографія</h4>
+            <p class="text-secondary">Основи хореографії. Дитина вчиться ритму, координації, гнучкості, поліпшує координацію та пам'ять.</p>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="container py-5">
+        <h2 class="text-center mb-5 fw-bold gold-text">ГАЛЕРЕЯ СТУДІЇ</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <img src="https://your-hall-photo-url.jpg" class="img-fluid rounded shadow" alt="Зал VibeSpace Studio - ваше фото"> <!-- Замініть на пряме посилання на ваше фото зала після завантаження на GitHub -->
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <img src="https://ny-glass.com/wp-content/uploads/2024/07/dance-yoga-studio_2.webp" class="img-fluid rounded shadow" alt="Інтер'єр студії з дзеркалами">
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <img src="https://cdn.freepixel.com/thumb/free-photos-a-modern-dance-studio-with-a-sleek-and-minimalist-aesthetic-the-room-is-well-lit-with-a-row-of-mirro-th-1004268893.jpg" class="img-fluid rounded shadow" alt="Сучасний зал для танців">
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и Форма -->
+    <section id="contact" class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4 gold-text">КОНТАКТИ</h2>
+                <p class="fs-5 mb-1"><i class="bi bi-geo-alt gold-text me-2"></i> Софіївська Борщагівка</p>
+                <p class="fs-6 text-secondary mb-4">вул. Щаслива, 11</p>
+                
+                <div class="map-container shadow-lg mb-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.296144618397!2d30.367145276587!3d50.410345971576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5b0b0b0b0b%3A0xabcdef1234567890!2zVmlib1NwYWNlIFN0dWRpbw!5e0!3m2!1suk!2sua!4v1704067200000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <a href="https://maps.app.goo.gl/H4TZB2ehdPQ38tro7" target="_blank" class="btn btn-outline-warning w-100 gold-text" style="border-color: var(--main-gold);">Відкрити в Google Maps</a>
+            </div>
+            
+            <div id="form" class="col-lg-6">
+                <div class="bg-black p-5 rounded-4 border border-dark shadow-lg">
+                    <h2 class="text-center mb-4 gold-text">ЗАПИСАТИСЯ</h2>
+                    <form action="#" method="POST"> <!-- Вставте endpoint від Formspree тут -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Ваше ім'я" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Номер телефону" required>
+                        </div>
+                        <div class="mb-4">
+                            <select class="form-select">
+                                <option selected disabled>Оберіть напрямок</option>
+                                <option>Body-ballet (25+)</option>
+                                <option>Jazz-Funk (25+)</option>
+                                <option>Choreo (25+)</option>
+                                <option>Lady Dance (25+)</option>
+                                <option>Stretching / Pilates</option>
+                                <option>Дитяча хореографія (5+)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-gold w-100 py-3">ВІДПРАВИТИ ЗАЯВКУ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="text-center py-5 border-top border-dark mt-5">
+        <div class="container">
+            <div class="mb-4">
+                <a href="https://www.instagram.com/vibespace_studio/" target="_blank" class="social-link mx-3">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+            <p class="text-secondary small mb-0">&copy; 2026 VibeSpace Studio. Твій рух — твій вайб.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
