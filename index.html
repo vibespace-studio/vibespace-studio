@@ -92,11 +92,13 @@
                 <div class="bg-black p-5 rounded-4 border border-dark shadow-lg">
                     <h2 class="text-center mb-4 gold">ЗАПИСАТИСЯ</h2>
                     <div id="thank-you">
-                        <h3>Дякуємо за заявку!</h3>
+                        <h3>Дякуємо за заявку! 🫶🏻 </h3>
                         <p>Ми зв'яжемося з вами найближчим часом.</p>
                     </div>
-                    <form id="contact-form" action="https://formspree.io/f/ТВІЙ_ЕНДПОЇНТ" method="POST" style="display:block">
-                        <div class="mb-3">
+                   <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="b71d0e18-08af-462d-b621-6ef488625df3">
+                        <input type="hidden" name="redirect" value="https://vibespace-studio.github.io/vibespace-studio/#thank-you">   
+                       <div class="mb-3">
                             <label class="form-label">Ваше ім'я</label>
                             <input type="text" name="name" class="form-control" required>
                         </div>
